@@ -1,0 +1,11 @@
+<h1>Home Page</h1>
+
+<p *ngIf="!service.isLoggedIn()">
+  Welcome {{ service.CurrentUserrole.name }}
+</p>
+
+<ul>
+  <li *ngIf="service.isLoggedIn() && service.CurrentUserrole?.admin"><a routerLink="/admin">Admin</a></li>
+  <li *ngIf="!service.isLoggedIn()"><a routerLink="/login">Login</a></li>
+  <li *ngIf="service.isLoggedIn()"><a (click)="service.logout()">Logout</a></li>
+</ul> 

@@ -1,0 +1,13 @@
+<h1>{{ coursescount }} {{ title }}</h1>
+<ul>
+  <li *ngFor="let course of coursList">
+    {{ course }}
+  </li>
+</ul>
+<div (click)="divClick()"><button class="btn btn-primary" (click)="buttonClick($event)">sdfs</button></div>
+<input [(ngModel)]="email" type="text" (keyup.h)="ghg()">
+
+{{ text | summary:1 }}
+
+<a routerLink="followers/674">FIrst</a>
+<a routerLink="followers/456">Second</a>

@@ -1,0 +1,5 @@
+<input type="text" #newpost (keyup.enter)="insertPost(newpost)">
+<ul>
+<li *ngFor="let post of posts"><button (click)="deletePost(post)">Delete</button><button (click)="updatePost(post)">Update</button><a [queryParams]="{ name:'hello',email:'hellol@gmail.com' }" [routerLink]="['/posts',post.id]">{{ post.title }}</a></li>
+
+</ul>
